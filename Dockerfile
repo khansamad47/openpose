@@ -35,7 +35,8 @@ RUN echo "Downloading and building OpenPose..." && \
 	git clone -b tracker https://github.com/khansamad47/openpose.git && \
 	mkdir -p /openpose/build && \
 	cd /openpose/build && \
-	cmake .. && \
-	make -j`nproc`
+	cmake -DBUILD_PYTHON=ON .. && \
+	make -j`nproc` && \
+	make install
 
 WORKDIR /openpose
