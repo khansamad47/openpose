@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../../python');
+sys.path.append('/usr/local/python')
 from openpose import pyopenpose as op
 import cv2
 
